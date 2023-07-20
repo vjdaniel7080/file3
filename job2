@@ -1,0 +1,20 @@
+pipeline {
+	agent any
+	options {
+		timeout(time: 5, unit: 'SECONDS')
+	}
+	stages {
+		stage('Genesso-stage1') {
+			steps{
+				echo "Welcome to Genesso Trainings"
+				sh 'sleep 10'
+			}
+		}
+		stage('Genesso-Stage2') {
+			steps{
+				echo "This is the Second Stage"
+				
+			}
+		}
+	}
+}
